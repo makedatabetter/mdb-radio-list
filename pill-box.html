@@ -46,14 +46,15 @@ pill box selection component
       attached: function () {
         this.querySelectorAll('paper-radio-button').forEach(function (e) {
           e.addEventListener('checked-changed', function () {
+            e.noink = true;
+            
             if (this.checked) {
               this.customStyle['--paper-radio-button-label-color'] = 'black'
             } else {
               delete this.customStyle['--paper-radio-button-label-color'];
             }
             this.updateStyles();
-          })
-
+          });
         });
       }
 
