@@ -17,10 +17,15 @@ pill box selection component
         display: block;
       }
       
+       :host[size="small"] ::content paper-radio-button {
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      
        :host ::content paper-radio-button[checked] {
-        -webkit-box-shadow: 0 0 8px blue;
-        -moz-box-shadow: 0 0 8px blue;
-        box-shadow: 0 0 8px blue;
+        -webkit-box-shadow: 0 0 15px #71b3e1;
+        -moz-box-shadow: 0 0 15px #71b3e1;
+        box-shadow: 0 0 15px #71b3e1;
       }
     </style>
     <paper-radio-group selected="{{selected}}">
@@ -40,23 +45,41 @@ pill box selection component
         },
 
         selected: {
-          type: String
+          type: String,
+          reflectToAttribute: true
+        },
+
+        size: {
+          type: String,
+          reflectToAttribute: true,
+          value: 'large',
+          reflectToAttribute: true,
+          observer: '_enumSize'
         },
       },
 
-      attached: function () {
-        this.querySelectorAll('paper-radio-button').forEach(function (e) {
-          e.addEventListener('checked-changed', function () {
-            e.noink = true;
+      _enumSize: function (newValue, oldValue) {
+        var validColors = ['small', 'large'];
+        if (validColors.indexOf(newValue) === -1) {
+          // Put the size back, and maybe throw in a line to throw an error
+          this.size = oldValue;
+        }
+      },
 
-            if (this.checked) {
-              this.customStyle['--paper-radio-button-label-color'] = 'black'
-            } else {
-              delete this.customStyle['--paper-radio-button-label-color'];
-            }
-            this.updateStyles();
+      attached: function () {
+        this.querySelectorAll('paper-radio-button')
+          .forEach(function (e) {
+            e.addEventListener('checked-changed', function () {
+              e.noink = true;
+
+              if (this.checked) {
+                this.customStyle['--paper-radio-button-label-color'] = '#464646'
+              } else {
+                delete this.customStyle['--paper-radio-button-label-color'];
+              }
+              this.updateStyles();
+            });
           });
-        });
       }
 
     });

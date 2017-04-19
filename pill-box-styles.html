@@ -1,22 +1,24 @@
-
 <link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="bower_components/font-roboto/roboto.html">
 
 <style is="custom-style">
-     :root paper-radio-button {
-      --paper-radio-button-checked-color: transparent;
-      --paper-radio-button-unchecked-color: transparent;
-      --paper-radio-button-label-color: #e0e8ed;
-      border: 1px solid;
-      border-color: #e0e8ed;
-      padding-right: 50px;
-    }
-    
-     :root paper-radio-button[checked] {
-      border-color: blue;
-    }
-    
-     :root paper-radio-button[checked]+paper-radio-button {
-      border-left: 0;
-    }
-  </style>
+   :root paper-radio-button {
+    --paper-radio-button-checked-color: transparent;
+    --paper-radio-button-unchecked-color: transparent;
+    --paper-radio-button-checked-ink-color: transparent;
+    --paper-radio-button-unchecked-ink-color: transparent;
+    --paper-radio-button-label-color: #e0e8ed;
+    --paper-radio-button-size: 0;
+    --paper-radio-button-label-spacing: 0;
+    border: 1px solid;
+    border-color: #e0e8ed;
+  }
+  
+   :root paper-radio-button[checked] {
+    border-color: #71b3e1;
+  }
+  
+   :root paper-radio-button[checked]+paper-radio-button {
+    border-left: 0;
+  }
+</style>

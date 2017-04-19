@@ -13,17 +13,24 @@
   <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
   <link rel="import" href="../pill-box.html">
 
-  <style is="custom-style" include="demo-pages-shared-styles">     
+  <style is="custom-style" include="demo-pages-shared-styles">
   </style>
 </head>
 
 <body>
-  <div class="vertical-section-container centered">
-    <h3>Basic pill-box demo</h3>
-    <pill-box selected="large">
-      <paper-radio-button name="small">Small</paper-radio-button>
-      <paper-radio-button name="medium">Medium</paper-radio-button>
-      <paper-radio-button name="large">Large</paper-radio-button>
+  <div>
+    <h3>Large pill-box demo</h3>
+    <pill-box selected="female">
+      <paper-radio-button name="male">Male</paper-radio-button>
+      <paper-radio-button name="female">Female</paper-radio-button>
+      <paper-radio-button name="others">Others</paper-radio-button>
+    </pill-box>
+
+    <h3>Small pill-box demo</h3>
+    <pill-box selected="extraordinary" size="small">
+      <paper-radio-button name="good">Good</paper-radio-button>
+      <paper-radio-button name="vgood">Very Good</paper-radio-button>
+      <paper-radio-button name="extraordinary">Extraordinary</paper-radio-button>
     </pill-box>
   </div>
 </body>
