@@ -17,6 +17,11 @@ pill box selection component
         display: block;
       }
       
+       :host ::content paper-radio-button {
+        border: 1px solid;
+        border-color: #e0e8ed;
+      }
+      
        :host[size="small"] ::content paper-radio-button {
         padding-top: 3px;
         padding-bottom: 3px;
@@ -26,6 +31,11 @@ pill box selection component
         -webkit-box-shadow: 0 0 15px #71b3e1;
         -moz-box-shadow: 0 0 15px #71b3e1;
         box-shadow: 0 0 15px #71b3e1;
+        border-color: #71b3e1;
+      }
+      
+       :host ::content paper-radio-button[checked]+paper-radio-button {
+        border-left: 0;
       }
     </style>
     <paper-radio-group selected="{{selected}}">
