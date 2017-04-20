@@ -32,6 +32,7 @@ pill box selection component
         -moz-box-shadow: 0 0 15px #71b3e1;
         box-shadow: 0 0 15px #71b3e1;
         border-color: #71b3e1;
+        --paper-radio-button-label-color: '#464646';
       }
       
        :host ::content paper-radio-button[aria-checked="true"]+paper-radio-button {
@@ -74,24 +75,7 @@ pill box selection component
           // Put the size back, and maybe throw in a line to throw an error
           this.size = oldValue;
         }
-      },
-
-      attached: function () {
-        this.querySelectorAll('paper-radio-button')
-          .forEach(function (e) {
-            e.addEventListener('checked-changed', function () {
-              e.noink = true;
-
-              if (this.checked) {
-                this.customStyle['--paper-radio-button-label-color'] = '#464646'
-              } else {
-                delete this.customStyle['--paper-radio-button-label-color'];
-              }
-              this.updateStyles();
-            });
-          });
       }
-
     });
   </script>
 </dom-module>
