@@ -77,8 +77,10 @@ pill box selection component
       },
 
       attached: function () {
-        this.querySelectorAll('paper-radio-button')
-          .forEach(function (e) {
+        var buttons = this.querySelectorAll('paper-radio-button');
+        for (i = 0; i < buttons.length; i++) {
+          var button = buttons[i];
+          (function (e) {
             e.addEventListener('checked-changed', function () {
               e.noink = true;
 
@@ -89,7 +91,8 @@ pill box selection component
               }
               this.updateStyles();
             });
-          });
+          })(button);
+        }
       }
 
     });
