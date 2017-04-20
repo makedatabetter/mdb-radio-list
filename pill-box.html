@@ -27,14 +27,14 @@ pill box selection component
         padding-bottom: 3px;
       }
       
-       :host ::content paper-radio-button[checked] {
+       :host ::content paper-radio-button[aria-checked="true"] {
         -webkit-box-shadow: 0 0 15px #71b3e1;
         -moz-box-shadow: 0 0 15px #71b3e1;
         box-shadow: 0 0 15px #71b3e1;
         border-color: #71b3e1;
       }
       
-       :host ::content paper-radio-button[checked]+paper-radio-button {
+       :host ::content paper-radio-button[aria-checked="true"]+paper-radio-button {
         border-left: 0;
       }
     </style>
