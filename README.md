@@ -1,4 +1,4 @@
-# \<pill-box\>
+# \<mdb-radio-list\>
 
 pill box selection component
 

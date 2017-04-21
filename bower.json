@@ -1,7 +1,7 @@
 {
-  "name": "pill-box",
+  "name": "mdb-radio-list",
   "description": "pill box selection component",
-  "main": "pill-box.html",
+  "main": "mdb-radio-list.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
     "paper-radio-group": "PolymerElements/paper-radio-group#^1.2.1"
