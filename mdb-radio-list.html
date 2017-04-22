@@ -95,7 +95,7 @@ pill box selection component
               if (this.checked) {
                 this.customStyle['--paper-radio-button-label-color'] = '#464646'
               } else {
-                delete this.customStyle['--paper-radio-button-label-color'];
+                this.customStyle['--paper-radio-button-label-color'] = customStyles['--paper-radio-button-label-color'];
               }
               this.updateStyles();
             });
